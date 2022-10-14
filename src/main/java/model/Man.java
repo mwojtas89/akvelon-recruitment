@@ -1,5 +1,7 @@
 package model;
 
+import controller.NotEnoughCapacityException;
+
 public class Man implements Consumer{
     private double capacity;                  //capacity in litres
     private double volume;
@@ -28,7 +30,10 @@ public class Man implements Consumer{
     }
 
     @Override
-    public void setVolume(double volume) {
+    public void setVolume(double volume) throws NotEnoughCapacityException {
+        if (capacity<volume) {
+            throw new NotEnoughCapacityException();
+        }
         this.volume=volume;
         this.capacityLeft=capacity-volume;
     }

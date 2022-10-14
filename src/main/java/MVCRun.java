@@ -1,5 +1,4 @@
 import controller.DrinkingController;
-import controller.NegativeLiquidToBeDrinkException;
 import model.Bottle;
 import model.Consumer;
 import model.Man;
@@ -28,7 +27,12 @@ public class MVCRun {
         Consumer man = new Man();
         man.setName("Mateusz");
         man.setCapacity(2);
-        man.setVolume(1);
+        try {
+            man.setVolume(1);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
         return man;
     }
 
@@ -36,7 +40,12 @@ public class MVCRun {
         Supplier bottle = new Bottle();
         bottle.setName("CocaCola");
         bottle.setCapacity(2);
-        bottle.setVolume(2);
+        try {
+            bottle.setVolume(2);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
         return bottle;
     }
 }

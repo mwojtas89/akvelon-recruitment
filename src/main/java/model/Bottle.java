@@ -1,5 +1,7 @@
 package model;
 
+import controller.NotEnoughCapacityException;
+
 public class Bottle implements Supplier{
     private double capacity;
     private double volume;
@@ -26,7 +28,10 @@ public class Bottle implements Supplier{
     }
 
     @Override
-    public void setVolume(double volume) {
+    public void setVolume(double volume) throws NotEnoughCapacityException {
+        if(capacity<volume) {
+            throw new NotEnoughCapacityException();
+        }
         this.volume=volume;
     }
 
