@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="controller.DrinkingControllerTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-10-14T14:44:19" hostname="MacBook-Air-Anna.local" time="0.038">
+  <properties/>
+  <testcase name="shouldThrowNotEnoughtCapacityException()" classname="controller.DrinkingControllerTest" time="0.026"/>
+  <testcase name="drinkLiquid()" classname="controller.DrinkingControllerTest" time="0.003"/>
+  <testcase name="shouldThrowNegativeLiquidException()" classname="controller.DrinkingControllerTest" time="0.002"/>
+  <testcase name="shouldThrowNotEnoughLiquidException()" classname="controller.DrinkingControllerTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
